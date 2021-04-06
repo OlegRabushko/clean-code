@@ -1,13 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>Clean-code</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" media="screen" charset="utf-8">
+  <title>todo app</title>
 </head>
-<body>
-    <script src="./index.js"></script>
+
+<body class="container">
+  <header class="header">
+    <img class="header__img" src="./eisenhower-matrix.jpg" alt="">
+    <a class="header__question" href="https://goal-life.com/page/method/matrix-eisenhower">want more details?</a>
+  </header>
+  <section class="todo">
+    <p id="todo__top-section">
+      <label class="todo__label" for="new-task">add item</label>
+    </p>
+    <div class="todo__add-item">
+      <input id="todo__new-item" class="todo__task" type="text">
+      <button class="todo__add">add</button>
+    </div>
+    <h3 class="todo__heading">todo</h3>
+    <ul id="todo__incomplete-tasks">
+      <li class="todo__li">
+        <input type="checkbox">
+        <label class="todo__task todo__label">pay bills</label>
+        <input type="text">
+        <button class="todo__edit">edit</button>
+        <button class="todo__delete">
+          <img class="todo__delete__img" src="./remove.svg" alt="delete-button">
+        </button>
+      </li>
+      <li class="todo__edit-mode todo__li">
+        <input type="checkbox">
+        <label class="todo__task todo__label">go shopping</label>
+        <input type="text" value="go shopping" class="todo__task">
+        <button class="todo__edit">save</button>
+        <button class="todo__delete">
+          <img class="todo__delete__img" src="./remove.svg" alt="delete-button">
+        </button>
+      </li>
+    </ul>
+    <h3 class="todo__heading">completed</h3>
+    <ul id="todo__completed-tasks">
+      <li class="todo__li">
+        <input type="checkbox" checked>
+        <label class="todo__task todo__label">see the doctor</label>
+        <input type="text" class="todo__task">
+        <button class="todo__edit">edit</button>
+        <button class="todo__delete">
+          <img class="todo__delete__img" src="./remove.svg" alt="delete-button">
+        </button>
+      </li>
+    </ul>
+  </section>
+  <script src="./index.js"></script>
 </body>
+
 </html>
+
+<!-- Пункт 2.1 был выполнен в процессе работы. Ссылка на БЭМ- методологию: https://habr.com/ru/company/yandex/blog/276035/ -->
